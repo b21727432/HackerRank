@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="grupofis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-06-13 06:24:59 "/>
+        <attribute name="created" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA2LTEzOyIwNjoxNjoxOCAiOzI1ODE="/>
+        <attribute name="edited" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA2LTEzOyIwNjoyNDo1OSAiOzE7MjY5Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="toplam, N" type="Integer" array="False" size=""/>
+            <assign variable="toplam" expression="0"/>
+            <input variable="N"/>
+            <while expression="N &gt;= 1">
+                <assign variable="toplam" expression="toplam + N"/>
+                <assign variable="N" expression="N - 1"/>
+            </while>
+            <output expression="&quot;1 den N'e kadar olan sayilarin toplami : &quot;" newline="True"/>
+            <output expression="toplam" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
