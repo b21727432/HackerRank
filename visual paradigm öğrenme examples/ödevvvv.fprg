@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="grupofis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-06-08 09:21:10 "/>
+        <attribute name="created" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA2LTA4OyIwNjowMjo0MCAiOzI1NzU="/>
+        <attribute name="edited" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA2LTA4OyIwOToyMToxMCAiOzE7MjY4NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="g" type="Real" array="True" size="5"/>
+            <declare name="temp" type="Real" array="True" size="5"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="5" direction="inc" step="1">
+                <if expression="i == 5">
+                    <then>
+                        <assign variable="temp[x]" expression="g[6-x]"/>
+                    </then>
+                    <else>
+                        <assign variable="temp[x]" expression="g[6-x] - g[5-x]"/>
+                    </else>
+                </if>
+            </for>
+            <call expression="Array.Sort(temp)"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="temp.Lenght - 1"/>
+            <if expression="n mod 2 = 0">
+                <then>
+                    <declare name="birincikartel, ikincikartel, ucuncukartel" type="Integer" array="False" size=""/>
+                    <assign variable="birincikartel" expression="(temp((n/4)+1) + temp(n/4))/2"/>
+                    <assign variable="ikincikartel" expression="temp(n/2) + temp((n/2)+1)"/>
+                    <assign variable="ucuncukartel" expression="(temp(((3*n)/4)+1) + temp((3*n)/4))/2"/>
+                    <output expression="birincikartel, ikincikartel, ucuncukartel" newline="True"/>
+                </then>
+                <else>
+                    <declare name="birincikartel, ikincikartel, ucuncukartel" type="Integer" array="False" size=""/>
+                    <assign variable="ikincikartel" expression="temp((n+1)/2)"/>
+                    <assign variable="birincikartel" expression="temp((n+1)/4)"/>
+                    <assign variable="ucuncukartel" expression="temp(((3*n)+1)/4)"/>
+                    <output expression="birincikartel, ikincikartel, ucuncukartel" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

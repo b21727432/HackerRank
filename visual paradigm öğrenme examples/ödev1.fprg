@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="grupofis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-06-27 12:34:49 "/>
+        <attribute name="created" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA2LTI3OyIwOTo0MTowNyAiOzI1ODU="/>
+        <attribute name="edited" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA2LTI3OyIxMjozNDo0OSAiOzI7MjY5Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="asal, k, m, a, bsifir, deneme, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Hangi say&#305;n&#305;n asall&#305;&#287;&#305;n&#305; test edilicek n=?&quot;" newline="True"/>
+            <input variable="asal"/>
+            <output expression="&quot;1.Ad&#305;m k ve m nin bulunmas&#305;&quot;" newline="True"/>
+            <assign variable="k" expression="1"/>
+            <while expression="(asal-1) mod (2^k) == 0">
+                <assign variable="k" expression="k + 1"/>
+            </while>
+            <assign variable="k" expression="k-1"/>
+            <assign variable="m" expression="asal / (2^k)"/>
+            <output expression="&quot;k = &quot; &amp; k &amp; &quot;, m = &quot; &amp; m &amp; &quot;, 2^&quot; &amp; k &amp; &quot;*&quot; &amp; m &amp; &quot;=&quot; &amp; (2^k)*m" newline="True"/>
+            <output expression="&quot;2. ad&#305;m 1&lt;a&lt;n-1 rastgele bir say&#305; se&#231;ilir...&quot;" newline="True"/>
+            <assign variable="a" expression="1"/>
+            <while expression="a == 1">
+                <assign variable="a" expression="Random(asal)"/>
+            </while>
+            <output expression="&quot;a = &quot; &amp; a" newline="True"/>
+            <output expression="&quot;3.Ad&#305;m b0 = b0 ^ m mod n hesaplanmas&#305; ve asall&#305;k karar&#305;&quot;" newline="True"/>
+            <assign variable="bsifir" expression="(a^m) mod asal"/>
+            <output expression="&quot;Deneme say&#305;s&#305; t=? &quot;" newline="True"/>
+            <input variable="deneme"/>
+            <for variable="i" start="0" end="deneme" direction="inc" step="1">
+                <if expression="(bsifir + 1) == asal">
+                    <then>
+                        <output expression="&quot;bo = &quot; &amp; bsifir" newline="True"/>
+                        <output expression="&quot;asal&quot;" newline="True"/>
+                        <assign variable="i" expression="deneme"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;bo = &quot; &amp; bsifir" newline="True"/>
+                        <assign variable="bsifir" expression="(bsifir * bsifir)"/>
+                        <while expression="bsifir &gt; asal">
+                            <assign variable="bsifir" expression="bsifir - asal"/>
+                        </while>
+                        <if expression="i == deneme">
+                            <then>
+                                <output expression="&quot;asal de&#287;il&quot;" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="grupofis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-06-02 08:43:22 "/>
+        <attribute name="created" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA2LTAyOyIwMjo1MToyMCAiOzI1Njc="/>
+        <attribute name="edited" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA2LTAyOyIwODo0MzoyMiAiOzI7MjY4NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <declare name="A, B" type="Integer" array="True" size="N"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <assign variable="A[i]" expression="random(100)"/>
+                <assign variable="B[i]" expression="A[i]"/>
+            </for>
+            <output expression="&quot;Sirasiz Dizi&quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <output expression="A[i]" newline="True"/>
+            </for>
+            <call expression="kabarc&#305;k(A,N)"/>
+            <call expression="secmeli(B,N)"/>
+        </body>
+    </function>
+    <function name="kabarc&#305;k" type="None" variable="">
+        <parameters>
+            <parameter name="A" type="Integer" array="True"/>
+            <parameter name="N" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Swap" type="Boolean" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="temp" type="Integer" array="False" size=""/>
+            <declare name="karsilastirma" type="Integer" array="False" size=""/>
+            <declare name="yerdegistirme" type="Integer" array="False" size=""/>
+            <assign variable="karsilastirma" expression="0"/>
+            <assign variable="yerdegistirme" expression="0"/>
+            <assign variable="Swap" expression="True"/>
+            <while expression="Swap == True">
+                <assign variable="Swap" expression="False"/>
+                <for variable="i" start="0" end="N-2" direction="inc" step="1">
+                    <comment text="Swap ve for d&#246;ng&#252;s&#252; dahil s&#305;ralama bi&#231;imimiz i&#231; i&#231;e 2 defa d&#246;n&#252;yor d&#305;&#351;ar&#305;daki for d&#246;ng&#252;s&#252;nde bulmas&#305; durumunda &#231;&#305;k&#305;yor.D&#305;&#351;ar&#305;daki d&#246;ng&#252; n defa, i&#231;erideki d&#246;ng&#252; ise d&#305;&#351;ar&#305;daki d&#246;ng&#252;ye ba&#287;l&#305; d&#246;n&#252;yor.toplamda n.(n-1)/2 zaman karma&#351;as&#305;na sahip fakat O g&#246;steriminde sadece O(n^2) dememiz do&#287;ru olur."/>
+                    <if expression="A[i] &gt; A[i+1]">
+                        <then>
+                            <assign variable="karsilastirma" expression="karsilastirma + 1"/>
+                            <assign variable="yerdegistirme" expression="yerdegistirme + 1"/>
+                            <assign variable="temp" expression="A[i]"/>
+                            <assign variable="A[i]" expression="A[i+1]"/>
+                            <assign variable="A[i+1]" expression="temp"/>
+                            <assign variable="Swap" expression="True"/>
+                        </then>
+                        <else>
+                            <assign variable="karsilastirma" expression="karsilastirma + 1"/>
+                        </else>
+                    </if>
+                </for>
+            </while>
+            <output expression="&quot;Kabarcik ile S&#305;ralanm&#305;s Liste&quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <output expression="A[i]" newline="True"/>
+            </for>
+            <output expression="&quot;Karsilastirma Sayisi&quot;" newline="True"/>
+            <comment text="Karsilastirma sayisinin teorik olarak alt de&#287;eri log2 taban&#305;nda n! hesaplanmas&#305;yla bulunur.Flowgorithm bu hesaplamalar&#305; destekleyemedi&#287;inden burda hesaplama yapam&#305;yorum fakat 100 elemanl&#305; bir liste i&#231;in secmeli karsilastirma de&#287;eri 8910 &#231;&#305;kt&#305;. log2(100!) ise 524.765 e e&#351;it bu durumda s&#246;ylebiliriz ki kabarc&#305;k s&#305;ralama olmas&#305; gerekenden fazla s&#305;ralama yapan bir s&#305;ralama bi&#231;imi.Hatta secmeli s&#305;ralamadan da daha fazla kar&#351;&#305;la&#351;t&#305;rma yapt&#305;."/>
+            <output expression="karsilastirma" newline="True"/>
+            <output expression="&quot;Yer degistirme Sayisi&quot;" newline="True"/>
+            <output expression="yerdegistirme" newline="True"/>
+        </body>
+    </function>
+    <function name="secmeli" type="None" variable="">
+        <parameters>
+            <parameter name="A" type="Integer" array="True"/>
+            <parameter name="N" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="yerelMin" type="Integer" array="False" size=""/>
+            <declare name="karsilastirma, yerdegistirme" type="Integer" array="False" size=""/>
+            <assign variable="karsilastirma" expression="0"/>
+            <assign variable="yerdegistirme" expression="0"/>
+            <for variable="i" start="0" end="N-2" direction="inc" step="1">
+                <assign variable="yerelMin" expression="i"/>
+                <comment text="&#304;c ice 2 adet for kulland&#305;&#287;&#305;m&#305;zdan secmeli s&#305;ralaman&#305;n zaman kar&#305;&#351;&#305;kl&#305;g&#305; O(n^2)dir."/>
+                <for variable="j" start="i+1" end="N-1" direction="inc" step="1">
+                    <if expression="A[j] &lt; A[yerelMin]">
+                        <then>
+                            <assign variable="karsilastirma" expression="karsilastirma + 1"/>
+                            <assign variable="yerelMin" expression="j"/>
+                        </then>
+                        <else>
+                            <assign variable="karsilastirma" expression="karsilastirma + 1"/>
+                        </else>
+                    </if>
+                </for>
+                <if expression="yerelMin != i">
+                    <then>
+                        <assign variable="karsilastirma" expression="karsilastirma + 1"/>
+                        <declare name="temp" type="Integer" array="False" size=""/>
+                        <assign variable="temp" expression="A[i]"/>
+                        <assign variable="A[i]" expression="A[yerelMin]"/>
+                        <assign variable="A[yerelMin]" expression="temp"/>
+                        <assign variable="yerdegistirme" expression="yerdegistirme + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="karsilastirma" expression="karsilastirma + 1"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Secmeli ile siralanmis Liste&quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <output expression="A[i]" newline="True"/>
+            </for>
+            <output expression="&quot;Karsilastirma Sayisi&quot;" newline="True"/>
+            <comment text="Karsilastirma sayisinin teorik olarak alt de&#287;eri log2 taban&#305;nda n! hesaplanmas&#305;yla bulunur.Flowgorithm bu hesaplamalar&#305; destekleyemedi&#287;inden burda hesaplama yapam&#305;yorum fakat 100 elemanl&#305; bir liste i&#231;in secmeli karsilastirma de&#287;eri 5049 &#231;&#305;kt&#305;. log2(100!) ise 524.765 e e&#351;it bu durumda s&#246;ylebiliriz ki secmeli s&#305;ralama olmas&#305; gerekenden fazla s&#305;ralama yapan bir s&#305;ralama bi&#231;imi."/>
+            <output expression="karsilastirma" newline="True"/>
+            <output expression="&quot;Yer degistirme Say&#305;s&#305;&quot;" newline="True"/>
+            <output expression="yerdegistirme" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
