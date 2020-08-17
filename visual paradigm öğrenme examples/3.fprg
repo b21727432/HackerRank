@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="grupofis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-07-17 12:25:58 "/>
+        <attribute name="created" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA3LTE3OyIxMjoyMzozOCAiOzI1ODM="/>
+        <attribute name="edited" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA3LTE3OyIxMjoyNTo1OCAiOzE7MjY5NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vize, final, ortalamanot" type="Integer" array="False" size=""/>
+            <output expression="&quot;vize notunu girin&quot;" newline="True"/>
+            <input variable="vize"/>
+            <output expression="&quot;final notunu girin&quot;" newline="True"/>
+            <input variable="final"/>
+            <assign variable="ortalamanot" expression="vize * 40 + final * 60"/>
+            <if expression="ortalamanot &gt; 50">
+                <then>
+                    <output expression="&quot;&#214;&#287;renci dersi ge&#231;ti&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;&#246;&#287;renci dersten kald&#305;.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

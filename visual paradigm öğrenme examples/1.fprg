@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="grupofis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-07-17 12:15:28 "/>
+        <attribute name="created" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA3LTE3OyIxMjowODo0NCAiOzI1ODM="/>
+        <attribute name="edited" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA3LTE3OyIxMjoxNToyOCAiOzE7MjY5MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="liste" type="Integer" array="True" size="4"/>
+            <declare name="max, i" type="Integer" array="False" size=""/>
+            <input variable="liste[0]"/>
+            <input variable="liste[1]"/>
+            <input variable="liste[2]"/>
+            <input variable="liste[3]"/>
+            <assign variable="max" expression="liste[0]"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt; 4">
+                <if expression="liste[i] &gt; max">
+                    <then>
+                        <assign variable="max" expression="liste[i]"/>
+                    </then>
+                    <else>
+                        <assign variable="i" expression="i + 1"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="max" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

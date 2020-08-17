@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="grupofis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-07-17 12:28:01 "/>
+        <attribute name="created" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA3LTE3OyIxMjoxNjoyMSAiOzI1Nzc="/>
+        <attribute name="edited" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA3LTE3OyIxMjoyODowMSAiOzI7MjY4Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, d, x1, x2" type="Integer" array="False" size=""/>
+            <output expression="&quot;kareli ifadenin katsay&#305;s&#305;n&#305; girin&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot; tek derecedeli katsay&#305; girin&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;sabit say&#305;y&#305; girin&quot;" newline="True"/>
+            <input variable="c"/>
+            <assign variable="d" expression="sqrt((b * b) - (4 * a * c))"/>
+            <assign variable="x1" expression="(-b + d) / ( 2 * a)"/>
+            <assign variable="x2" expression="(-b - d) / ( 2 * a)"/>
+            <output expression="&quot;ilk k&#246;k&quot;" newline="True"/>
+            <output expression="-x1" newline="True"/>
+            <output expression="&quot;ikinci k&#246;k&quot;" newline="True"/>
+            <output expression="-x2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
