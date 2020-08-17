@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="grupofis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-07-27 12:48:23 "/>
+        <attribute name="created" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA3LTI3OyIxMjozMjo0MSAiOzI1Nzg="/>
+        <attribute name="edited" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA3LTI3OyIxMjo0ODoyMyAiOzE7MjY5Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi1, sayi2, i, ekok, z, bayrak" type="Integer" array="False" size=""/>
+            <output expression="&quot;Birinci say&#305;y&#305; giriniz...&quot;" newline="True"/>
+            <input variable="sayi1"/>
+            <output expression="&quot;&#304;kinci sayiyi giriniz...&quot;" newline="True"/>
+            <input variable="sayi2"/>
+            <if expression="sayi1 &gt; sayi2">
+                <then>
+                    <assign variable="z" expression="sayi1"/>
+                </then>
+                <else>
+                    <assign variable="z" expression="sayi2"/>
+                </else>
+            </if>
+            <assign variable="bayrak" expression="0"/>
+            <while expression="bayrak != 1">
+                <if expression="z % sayi1 == 0 &amp;&amp; z % sayi2 == 0">
+                    <then>
+                        <assign variable="ekok" expression="z"/>
+                        <assign variable="bayrak" expression="1"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="z" expression="z + 1"/>
+            </while>
+            <output expression="&quot;En k&#252;&#231;&#252;k ortak kat&#305;m&#305;z &quot; &amp; ekok" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

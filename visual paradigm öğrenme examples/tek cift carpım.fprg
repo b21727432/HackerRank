@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="grupofis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-07-27 02:14:01 "/>
+        <attribute name="created" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA3LTI3OyIxMjo0ODoyNiAiOzI1ODg="/>
+        <attribute name="edited" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIwLTA3LTI3OyIwMjoxNDowMSAiOzE7MjY4MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, tektoplam, tekcarpim, cifttoplam, ciftcarpim" type="Integer" array="False" size=""/>
+            <assign variable="tektoplam" expression="0"/>
+            <assign variable="cifttoplam" expression="0"/>
+            <assign variable="ciftcarpim" expression="1"/>
+            <assign variable="tekcarpim" expression="1"/>
+            <for variable="i" start="1" end="99" direction="inc" step="1">
+                <if expression="i % 2 == 0">
+                    <then>
+                        <assign variable="cifttoplam" expression="cifttoplam + i"/>
+                        <assign variable="ciftcarpim" expression="ciftcarpim * i"/>
+                    </then>
+                    <else>
+                        <assign variable="tektoplam" expression="tektoplam + i"/>
+                        <assign variable="tekcarpim" expression="tekcarpim * i"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Tek say&#305;lar&#305;n toplam&#305; : &quot; &amp; tektoplam &amp; &quot;Tek say&#305;lar&#305;n &#231;arp&#305;m&#305; : &quot; &amp; tekcarpim" newline="True"/>
+            <output expression="&quot;&#199;ift say&#305;lar&#305;n toplam&#305; : &quot; &amp; cifttoplam &amp; &quot;&#199;ift say&#305;lar&#305;n &#231;arp&#305;m&#305; : &quot; &amp; ciftcarpim" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
