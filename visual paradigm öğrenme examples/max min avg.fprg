@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="grupofis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-10 06:59:16 "/>
+        <attribute name="created" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIxLTAyLTEwOyIwNjo1MDoyNCAiOzI1NzA="/>
+        <attribute name="edited" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIxLTAyLTEwOyIwNjo1OToxNiAiOzE7MjY4OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, max, min, avg" type="Integer" array="False" size=""/>
+            <assign variable="min" expression="0"/>
+            <assign variable="max" expression="0"/>
+            <assign variable="avg" expression="0"/>
+            <declare name="liste" type="Integer" array="True" size="100"/>
+            <for variable="i" start="0" end="100" direction="inc" step="1">
+                <input variable="liste[i]"/>
+            </for>
+            <for variable="i" start="0" end="100" direction="inc" step="1">
+                <if expression="liste[i] &gt; max">
+                    <then>
+                        <assign variable="max" expression="liste[i]"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="min &lt; liste[i]">
+                    <then>
+                        <assign variable="min" expression="liste[i]"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="avg" expression="avg + liste[i]"/>
+            </for>
+            <assign variable="avg" expression="avg / 100"/>
+            <output expression="&quot;max is&quot; &amp; max &amp; &quot;min is&quot; &amp; min &amp; &quot;avg is&quot; &amp; avg" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

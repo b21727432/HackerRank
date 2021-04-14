@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="grupofis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-10 07:03:28 "/>
+        <attribute name="created" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIxLTAyLTEwOyIwNjo1OToxNyAiOzI1ODE="/>
+        <attribute name="edited" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIxLTAyLTEwOyIwNzowMzoyOCAiOzE7MjY4MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <input variable="age"/>
+            <if expression="age &lt; 18">
+                <then>
+                    <output expression="&quot;young&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="age &gt;= 18 &amp;&amp; age &lt;= 50">
+                        <then>
+                            <output expression="&quot;adult&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;old&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

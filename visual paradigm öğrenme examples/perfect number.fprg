@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="grupofis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-10 07:12:35 "/>
+        <attribute name="created" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIxLTAyLTEwOyIwNzowMzoyOSAiOzI1NzQ="/>
+        <attribute name="edited" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIxLTAyLTEwOyIwNzoxMjozNSAiOzE7MjY3OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="perfectnumber, i, total" type="Integer" array="False" size=""/>
+            <input variable="perfectnumber"/>
+            <assign variable="total" expression="0"/>
+            <for variable="i" start="1" end="perfectnumber - 1" direction="inc" step="1">
+                <if expression="perfectnumber % i == 0">
+                    <then>
+                        <assign variable="total" expression="total + i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="perfectnumber == total">
+                <then>
+                    <output expression="&quot;input is perfect number&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;input is not a perfect number&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

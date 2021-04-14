@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="grupofis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-28 01:35:33 "/>
+        <attribute name="created" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIxLTAzLTI4OyIwOTo0OTowNSAiOzI1OTA="/>
+        <attribute name="edited" value="Z3J1cG9maXM7VVNFUi1QQzsyMDIxLTAzLTI4OyIwMTozNTozMyAiOzE7MjY4Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, anneboy, bababoy, hedef" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="19" direction="inc" step="1">
+                <output expression="&quot;anne boyunu giriniz: &quot;" newline="True"/>
+                <input variable="anneboy"/>
+                <output expression="&quot;baba boyunu giriniz:&quot;" newline="True"/>
+                <input variable="bababoy"/>
+                <assign variable="hedef" expression="(anneboy + bababoy + 13) / 2"/>
+                <if expression="hedef &gt;= 175 &amp;&amp; hedef &lt;= 176">
+                    <then>
+                        <output expression="&quot;t&#252;rkiye ortalamas&#305; i&#231;inde&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;t&#252;rkiye ortalamas&#305; d&#305;&#351;&#305;nda&quot;" newline="True"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
