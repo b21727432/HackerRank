@@ -1,0 +1,23 @@
+Açıklama : 
+
+C Ödevi : 
+C ödevinde verinin , ile ayrılması zordu.String diye bir veri tipinin olmaması büyük eksiklik ve zorlayıcı.
+Veri okuması diğer dillere göre daha karışık, Struct mantığı genel olarak
+class mantığına benzediği için o kısım normal ama diğer kısımlarda c biraz daha az yardımcı oluyor.
+Ödevin Uzunluğu : 56 Satır
+
+C++ Ödevi : 
+C++ da C ye çok benzeyen bir dil olduğu için genel olarak veri okuma kısmı benzer ama string diye bir değişken tipinin olması,
+çok yardımcı oluyor.Class yapısı ve class'a ait fonksiyonları yazması C ye göre daha iyi. Burda da cümleyi parçalama kısmı daha zor(split)
+bunu yapabilmek için vector veri yapısını kullanmak ve bir döngü kullanmak gerekiyor. Bir de string değişkeni int'e dönüştürmek diğer dillerden daha zor.
+Ödevin Uzunluğu : 78 Satır
+
+Python Ödevi :
+Aralarında en kolay yaptığım Python idi. Pandas ile okuma çok kolay, listeleri kullanması çok kolay ve basit, dilde veri tipinin olmaması yazma açısından çok rahat.
+Matematiksel işlemler, float int diye belirtme olmaması her şey diğer dillere göre çok daha basitti.
+Ödevin Uzunluğu : 23 Satır
+
+C# Ödevi :
+Pythondan sonra en yardımcı olan dillerden biri. Dosya okuma, satır satır gezme, satırları , den bölme işlemleri çok kolay. Verileri dönüştürme işlemleri çok kolay.
+Class yapısı ve fonksiyonları diğer dillerle aynı ama string operasyonlarının, aritmetik işlemlerinin olması en kolay ikinci ödev oldu benim için. 
+Ödevin Uzunluğu : 65 Satır
