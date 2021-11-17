@@ -1,0 +1,12 @@
+C:\Users\grupofis\source\repos\ConsoleApp15\ConsoleApp15\bin\Debug\netcoreapp3.1\ConsoleApp15.exe
+C:\Users\grupofis\source\repos\ConsoleApp15\ConsoleApp15\bin\Debug\netcoreapp3.1\ConsoleApp15.deps.json
+C:\Users\grupofis\source\repos\ConsoleApp15\ConsoleApp15\bin\Debug\netcoreapp3.1\ConsoleApp15.runtimeconfig.json
+C:\Users\grupofis\source\repos\ConsoleApp15\ConsoleApp15\bin\Debug\netcoreapp3.1\ConsoleApp15.runtimeconfig.dev.json
+C:\Users\grupofis\source\repos\ConsoleApp15\ConsoleApp15\bin\Debug\netcoreapp3.1\ConsoleApp15.dll
+C:\Users\grupofis\source\repos\ConsoleApp15\ConsoleApp15\bin\Debug\netcoreapp3.1\ConsoleApp15.pdb
+C:\Users\grupofis\source\repos\ConsoleApp15\ConsoleApp15\obj\Debug\netcoreapp3.1\ConsoleApp15.csproj.CoreCompileInputs.cache
+C:\Users\grupofis\source\repos\ConsoleApp15\ConsoleApp15\obj\Debug\netcoreapp3.1\ConsoleApp15.AssemblyInfoInputs.cache
+C:\Users\grupofis\source\repos\ConsoleApp15\ConsoleApp15\obj\Debug\netcoreapp3.1\ConsoleApp15.AssemblyInfo.cs
+C:\Users\grupofis\source\repos\ConsoleApp15\ConsoleApp15\obj\Debug\netcoreapp3.1\ConsoleApp15.dll
+C:\Users\grupofis\source\repos\ConsoleApp15\ConsoleApp15\obj\Debug\netcoreapp3.1\ConsoleApp15.pdb
+C:\Users\grupofis\source\repos\ConsoleApp15\ConsoleApp15\obj\Debug\netcoreapp3.1\ConsoleApp15.genruntimeconfig.cache
